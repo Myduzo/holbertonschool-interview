@@ -15,6 +15,8 @@ def canUnlockAll(boxes):
                 continue
 
             for y in range(len(boxes[x])):
+                if (boxes[x][y] >= len(boxes)):
+                    continue
 
                 key = boxes[x][y]
                 if (not opened[key]):
