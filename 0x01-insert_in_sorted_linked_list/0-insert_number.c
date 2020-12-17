@@ -4,7 +4,7 @@
  * insert_node - inserts a number into a sorted singly linked list.
  * @head: first node
  * @number: the value of the node node
- * Return: node node
+ * Return: new node
  */
 listint_t *insert_node(listint_t **head, int number)
 {
@@ -12,11 +12,11 @@ listint_t *insert_node(listint_t **head, int number)
     listint_t *current;
 
     node = malloc(sizeof(listint_t));
+    node->n = number;
 
     if (!head || !node)
         return (NULL);
-
-    current = *head;
+    
 
     if (!*head)
     {
@@ -31,6 +31,8 @@ listint_t *insert_node(listint_t **head, int number)
         *head = node;
         return (node);
     }
+
+    current = *head;
 
     while (current->next)
     {
