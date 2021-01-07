@@ -11,13 +11,13 @@ def minOperations(n):
     total = 1
 
     while (total < n):
-      if (n % total == 0):
-        op += 2
-        copypaste = total
+        if (n % total == 0):
+            op += 2
+            copypaste = total
 
-      else:
-        op += 1
+        else:
+            op += 1
 
-      total = copypaste + total
+        total = copypaste + total
 
     return op
