@@ -8,7 +8,7 @@ def minOperations(n):
     hlist = ['H']
     flag = 1
 
-    if n is None or n <= 0:
+    if n is None or n <= 0 or isinstance(n, float):
         return 0
 
     if (n % 3) == 0:
