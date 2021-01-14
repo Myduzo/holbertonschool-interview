@@ -18,8 +18,15 @@ void sp_sum(int grid1[3][3], int grid2[3][3])
     }
     i++;
   }
+  sp_print_grid;
 }
 
+/**
+ * 
+ * 
+ * 
+ */
+int sp_stable (int grid[3][3], int gridsum[3][3])
 
 
 /**
@@ -27,7 +34,7 @@ void sp_sum(int grid1[3][3], int grid2[3][3])
  * @grid: 3x3 grid
  *
  */
-static void my_print_grid(int grid[3][3])
+static void sp_print_grid(int grid[3][3])
 {
     int i, j;
 
