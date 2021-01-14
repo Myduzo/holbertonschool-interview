@@ -13,7 +13,7 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 
     for (i = 0; i < 3; i++)
         for (j = 0; j < 3; j++)
-            grid1[i][j] = grid1[i][j] + grid2[i][j];
+            grid1[i][j] += grid2[i][j];
 
     while (sp_check(grid1) != 0)
     {
@@ -52,7 +52,7 @@ int sp_check(int grid1[3][3])
 void sp_stable (int grid1[3][3], int test[3][3])
 {
     int i = 0, j = 0;
-    int left = grid1[i][j - 1], right = grid1[i][j + 1], top = grid1[i - 1][j], bottom = grid1[i + 1][j];
+
 
     for (i = 0; i < 3; i++)
         for (j = 0; j < 3; j++)
@@ -66,13 +66,13 @@ void sp_stable (int grid1[3][3], int test[3][3])
             {
                 grid1[i][j] = grid1[i][j] - 4;
                 if (i >= 1)
-					top += 1;
+					grid1[i - 1][j] += 1;
 				if (i <= 1)
-					bottom += 1;
+					grid1[i + 1][j] += 1;
 				if (j >= 1)
-					left += 1;
+					grid1[i][j - 1] += 1;
 				if (j <= 1)
-					right += 1;
+					grid1[i][j + 1] += 1;
 			}
         }
     }
