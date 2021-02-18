@@ -16,7 +16,7 @@ def validUTF8(data):
     nbytes = bytes(arr)
     try:
         nbytes.decode()
-    except UnicodeError:
+    except UnicodeDecodeError:
         return False
 
     return True
