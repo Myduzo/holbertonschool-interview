@@ -8,13 +8,7 @@ def validUTF8(data):
     """
     Valid UTF-8 function
     """
-    arr = []
-    for idx in data:
-        if idx <= 255:
-            arr.append(idx)
-        else:
-            arr.append(0)
-
+    arr = [idx & 0b11111111 for idx in data]
     nbytes = bytes(arr)
     try:
         nbytes.decode()
