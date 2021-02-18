@@ -10,7 +10,7 @@ def validUTF8(data):
     """
     arr = []
     for idx in data:
-        if idx < 255:
+        if idx <= 255:
             arr.append(idx)
 
     nbytes = bytes(arr)
