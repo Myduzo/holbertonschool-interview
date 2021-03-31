@@ -19,7 +19,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 	{
 		node = search;
 		search = node->express;
-		printf("Value checked at index [%lu] and [%d]\n", search->index, search->n);
+		printf("Value checked at index [%lu] = [%d]\n", search->index, search->n);
 	}
 
 	if (!(search->express) && !(search->n > value))
@@ -34,14 +34,14 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 
 	while (node != search)
 	{
-		printf("Value checked at index [%lu] and [%d]\n", node->index, node->n);
+		printf("Value checked at index [%lu] = [%d]\n", node->index, node->n);
 		if (node->n == value)
 			return (node);
 		node = node->next;
 	}
 
 	if (node)
-		printf("Value checked at index [%lu] and [%d]\n", node->index, node->n);
+		printf("Value checked at index [%lu] = [%d]\n", node->index, node->n);
 
 	return (0);
 }
