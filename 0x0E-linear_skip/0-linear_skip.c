@@ -12,7 +12,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 {
 	skiplist_t *node = list, *search = list;
 
-	if (!value || !list)
+	if (!list)
 		return (NULL);
 
 	while (search->express && search->n < value)
