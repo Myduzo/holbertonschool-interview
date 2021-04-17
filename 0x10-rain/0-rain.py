@@ -8,13 +8,17 @@ def rain(walls: List[int]) -> int:
     """ Calculates how much water will
     be retained after it rains.
     """
-    if not walls:
-        return 0
+    res = 0
+    n = len(walls)
 
-    walls = list(set(walls))
-    walls.remove(0)
+    for x in range(1, n - 1):
+        left = walls[x]
+        for y in range(x):
+            left = max(left, walls[y])
 
-    count = 1
-    for wall in walls:
-        count *= wall
-    return int(count / len(walls))
+        right = walls[x]
+        for y in range(x + 1, n):
+            right = max(right, walls[y])
+
+        res = res + (min(left, right) - walls[x])
+    return res
