@@ -1,10 +1,9 @@
 #!/usr/bin/python3
 """ Rain
 """
-from typing import List
 
 
-def rain(walls: List[int]) -> int:
+def rain(walls):
     """ Calculates how much water will
     be retained after it rains.
     """
