@@ -61,13 +61,6 @@ int advanced_binary(int *array, size_t size, int value)
 
 	if (!array || size == 0)
 		return (-1);
-	
-	if (size == 1)
-	{
-		if (*array == value)
-			return (value);
-		return (-1);
-	}
 
 	return (recursive_binary(array, left, right, value));
 }
