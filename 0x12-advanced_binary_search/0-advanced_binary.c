@@ -28,7 +28,8 @@ int recursive_binary(int *array, size_t left, size_t right, int value)
 
 	if (array[mid] >= value)
 		right = mid;
-	else
+
+	if (array[mid] < value)
 		left = mid + 1;
 
 	if (left < right)
@@ -37,7 +38,11 @@ int recursive_binary(int *array, size_t left, size_t right, int value)
 	if (array[left] == value)
 		return (value);
 
-	return (-1);
+	else
+	{
+		printf("Searching in array: %d\n", array[left]);
+		return (-1);
+	}
 }
 
 /**
@@ -56,5 +61,6 @@ int advanced_binary(int *array, size_t size, int value)
 
 	if (!array)
 		return (-1);
+
 	return (recursive_binary(array, left, right, value));
 }
