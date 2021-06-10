@@ -45,6 +45,8 @@ void mergeArrays(int *array, int size, int mid, int *update)
 	{
 		array[i] = update[i];
 	}
+	printf("[Done]: ");
+	print_array(update, size);
 }
 
 
@@ -88,7 +90,5 @@ void merge_sort(int *array, size_t size)
 		return;
 
 	merge(array, size, update);
-	printf("[Done]: ");
-	print_array(update, size);
 	free(update);
 }
