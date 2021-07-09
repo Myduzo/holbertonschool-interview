@@ -41,7 +41,7 @@ void radix_sort(int *array, size_t size)
 	if (!array)
 		return;
 
-	array2 = malloc(sizeof array * size);
+	array2 = malloc(sizeof(int *) * size);
 	if (!array2)
 		return;
 
