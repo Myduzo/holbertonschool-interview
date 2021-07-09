@@ -35,12 +35,13 @@ int CountSort(int *array, ssize_t size, int pas, int *array2)
 void radix_sort(int *array, size_t size)
 {
 	size_t i = 0;
-	int *array2, max, pas;
+	int *array2, max;
+    long pas;
 
 	if (!array)
 		return;
 
-	array2 = malloc(sizeof(int *) * size);
+	array2 = malloc(sizeof array * size);
 	if (!array2)
 		return;
 
