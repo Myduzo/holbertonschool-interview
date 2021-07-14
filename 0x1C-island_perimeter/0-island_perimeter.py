@@ -8,6 +8,9 @@ def island_perimeter(grid):
     """
     count = 0
 
+    if len(grid) > 100:
+        return None
+
     for i in range(len(grid)):
         for j in range(len(grid[i])):
             if grid[i][j] == 1:
