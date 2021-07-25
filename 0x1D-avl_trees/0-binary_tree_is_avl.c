@@ -46,10 +46,10 @@ int check_avl(const binary_tree_t *tree, int min, int max, int *height)
  */
 int binary_tree_is_avl(const binary_tree_t *tree)
 {
-	int height = 0, heightL = INT_MIN, heightR = INT_MAX;
+	int height = 0, min = INT_MIN, max = INT_MAX;
 
 	if (!tree)
 		return (0);
 
-	return (check_avl(tree, heightL, heightR, &height));
+	return (check_avl(tree, min, max, &height));
 }
