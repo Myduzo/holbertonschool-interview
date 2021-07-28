@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * wildcmp - function that compares two strings
- *
+ * 
  * @s1: string pointer
  * @s2: string pointer
  *
